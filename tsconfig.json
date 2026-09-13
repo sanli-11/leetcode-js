@@ -2,11 +2,15 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "CommonJS",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["ds/**/*", "runner.ts", "problems/**/*"]
+  "include": [
+    "ds/**/*",
+    "runner.ts",
+    "problems/**/*"
+  ]
 }
