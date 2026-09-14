@@ -24,4 +24,16 @@ runTests(searchA2DMatrix, [
     ],
     expected: true,
   },
+  {
+    input: [[[1]], 2],
+    expected: false
+  },
+  {
+    input: [[[1],[3]], 1],
+    expected: true
+  },
+{
+    input: [[[1],[3]], 4],
+    expected: false
+  }
 ]);
