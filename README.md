@@ -3,3 +3,4 @@
 ## The problems are in random order and are labeled. A link is also provided to take directly to the problem
 
 57. [Insert Interval](https://leetcode.com/problems/insert-interval/description/)
+74. [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/description/)
