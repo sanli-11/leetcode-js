@@ -1,10 +1,7 @@
 function sortColors(nums: number[]): number[] {
   function merge(left: number[], right: number[]): number[] {
     const res = [];
-    let l = 0,
-      r = 0;
-
-      console.log("Combine received", left, right)
+    let l = 0, r = 0;
 
     while (l < left.length && r < right.length) {
       if (left[l] < right[r]) {
@@ -34,13 +31,15 @@ function sortColors(nums: number[]): number[] {
 
     const mid = Math.floor(array.length / 2);
 
-    const left = mergeSort(array.slice(0, mid));
-    const right = mergeSort(array.slice(mid));
+    const left: number[] = mergeSort(array.slice(0, mid));
+    const right: number[] = mergeSort(array.slice(mid));
 
     return merge(left, right);
   }
 
-  nums = mergeSort(nums);
+  mergeSort(nums).forEach((n) => nums.push(n));
+
+  nums.splice(0, Math.floor(nums.length / 2))
 
   return nums;
 }
