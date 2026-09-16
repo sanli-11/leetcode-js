@@ -1,11 +1,24 @@
 function sortColors(nums: number[]): number[] {
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = i + 1; j < nums.length; j++) {
-      if (nums[i] > nums[j]) {
-        let temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-      }
+  let left = 0,
+    mid = 0,
+    right = nums.length - 1,
+    temp;
+
+  while (mid <= right) {
+    switch (nums[mid]) {
+      case 0:
+        temp = nums[left];
+        nums[left++] = nums[mid];
+        nums[mid++] = temp;
+        break;
+      case 1:
+        mid++;
+        break;
+      default:
+        temp = nums[right];
+        nums[right--] = nums[mid];
+        nums[mid] = temp;
+        break;
     }
   }
 
