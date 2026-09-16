@@ -7,17 +7,16 @@ function sortColors(nums: number[]): number[] {
   while (mid <= right) {
     switch (nums[mid]) {
       case 0:
-        temp = nums[left];
-        nums[left++] = nums[mid];
-        nums[mid++] = temp;
+        [nums[left], nums[mid]] = [nums[mid], nums[left]];
+        left++;
+        mid++;
         break;
       case 1:
         mid++;
         break;
       default:
-        temp = nums[right];
-        nums[right--] = nums[mid];
-        nums[mid] = temp;
+        [nums[right], nums[mid]] = [nums[mid], nums[right]];
+        right--;
         break;
     }
   }
