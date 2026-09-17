@@ -11,7 +11,9 @@ function setZeroes(matrix: number[][]): number[][] {
     }
   }
 
-  zeroX.forEach((x: number) => (matrix[x] = Array(matrix[0].length).fill(0)));
+  zeroX.forEach((x: number) => {
+    for (let k = 0; k < matrix.length; k++) matrix[x][k] = 0
+  });
 
   zeroY.forEach((y) => {
     for (let k = 0; k < matrix.length; k++) matrix[k][y] = 0
