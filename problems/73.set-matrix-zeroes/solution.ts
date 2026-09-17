@@ -5,10 +5,12 @@ function setZeroes(matrix: number[][]): number[][] {
     row.forEach((num, j) => num === 0 && zeroIndices.push([i, j])),
   );
 
-  zeroIndices.forEach((zero) => {
-    for (let i = 0; i < matrix.length; i++) matrix[i][zero[1]] = 0;
+  const zeroRow = Array(matrix[0].length).fill(0);
 
-    for (let j = 0; j < matrix[0].length; j++) matrix[zero[0]][j] = 0;
+  zeroIndices.forEach((zero) => {
+    matrix[zero[0]] = zeroRow;
+
+    matrix.forEach((row) => row[zero[1]] = 0)
   });
 
   return matrix;
