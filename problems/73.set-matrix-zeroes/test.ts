@@ -30,4 +30,5 @@ runTests(setZeroes, [
       [0, 3, 1, 0],
     ],
   },
+  { input: [[[0, 1]]], expected: [[0, 0]] },
 ]);

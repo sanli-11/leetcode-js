@@ -11,13 +11,20 @@ function setZeroes(matrix: number[][]): number[][] {
     }
   }
 
-  zeroX.forEach((x: number) => {
-    for (let k = 0; k < matrix.length; k++) matrix[x][k] = 0
-  });
+  const zeroXArr = [...zeroX];
+  const zeroYArr = [...zeroY];
 
-  zeroY.forEach((y) => {
-    for (let k = 0; k < matrix.length; k++) matrix[k][y] = 0
-  });
+  for (let i = 0; i < zeroXArr.length; i ++) {
+    for (let j = 0; j < matrix[0].length; j ++) {
+      matrix[zeroXArr[i]][j] = 0
+    }
+  }
+
+  for (let i = 0; i < zeroYArr.length; i ++) {
+    for (let j = 0; j < matrix.length; j ++) {
+      matrix[j][zeroYArr[i]] = 0
+    }
+  }
 
   return matrix;
 }
