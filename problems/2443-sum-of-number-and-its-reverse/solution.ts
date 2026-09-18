@@ -5,7 +5,7 @@ function sumOfNumberAndItsReverse(num: number): boolean {
     if (num % 2 !== 0 && num % 11 !== 0 && num % i === 0) return false;
   }
 
-  for (let i = 0; i < num; i++) {
+  for (let i = 1; i < num; i++) {
     if (i + Number(i.toString().split("").reverse().join("")) === num)
       return true;
   }
