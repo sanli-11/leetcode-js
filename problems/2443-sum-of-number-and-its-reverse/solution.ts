@@ -6,8 +6,8 @@ function sumOfNumberAndItsReverse(num: number): boolean {
       n = i;
 
     while (n > 0) {
-      rev = rev * 10 + (n % 10);
-      n = Math.floor(n / 10);
+      rev = (rev * 10) + (n % 10);
+      n = n / 10 | 0;
     }
 
     if (i + rev === num) return true;
