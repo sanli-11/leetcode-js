@@ -1,7 +1,7 @@
 function sumOfNumberAndItsReverse(num: number): boolean {
   if (num === 0) return true;
 
-  for (let i = 1; i < num; i++) {
+  for (let i = num - 1; i >= num / 2; i--) {
     let rev = 0,
       n = i;
 
