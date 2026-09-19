@@ -1,9 +1,11 @@
 {
   "code-runner.executorMap": {
-    "typescript": "npx tsx"
+    "typescript": "npx tsx",
+    "go": "cd $dir && go run ."
   },
   "code-runner.clearPreviousOutput": true,
   "code-runner.showExecutionMessage": false,
   "code-runner.saveFileBeforeRun": true,
-  "code-runner.runInTerminal": true
+  "code-runner.runInTerminal": true,
+
 }
