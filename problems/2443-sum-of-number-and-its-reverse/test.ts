@@ -1,18 +1,11 @@
-import { runTests } from "../../runner";
+import { runTest } from "../../runner";
 import { sumOfNumberAndItsReverse } from "./solution";
 
-runTests(sumOfNumberAndItsReverse, [
-  {
-    input: [443],
-    expected: true,
-  },
-  {
-    input: [63],
-    expected: false,
-  },
-  { input: [181], expected: true },
-  { input: [20], expected: false },
-  { input: [21], expected: false },
-  { input: [11], expected: true },
-  { input: [4], expected: true },
-]);
+runTest(sumOfNumberAndItsReverse, true, 443);
+runTest(sumOfNumberAndItsReverse, false, 63);
+runTest(sumOfNumberAndItsReverse, true, 181);
+runTest(sumOfNumberAndItsReverse, false, 20);
+runTest(sumOfNumberAndItsReverse, false, 21);
+runTest(sumOfNumberAndItsReverse, true, 11);
+runTest(sumOfNumberAndItsReverse, true, 4);
+runTest(sumOfNumberAndItsReverse, true, 141);
