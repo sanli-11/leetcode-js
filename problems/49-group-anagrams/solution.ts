@@ -10,7 +10,15 @@ function groupAnagrams(strs: string[]): string[][] {
       : map.set(sortedLetters, [strs[i]]);
   }
 
-  map.forEach((arr) => res.push(arr));
+  let iterator = map.values();
+
+  for (
+    let v = iterator.next().value;
+    v !== undefined;
+    v = iterator.next().value
+  ) {
+    res.push(v);
+  }
 
   return res;
 }
