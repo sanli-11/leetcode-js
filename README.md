@@ -2,6 +2,7 @@
 
 ## The problems are in random order and are labeled. A link is also provided to take directly to the problem
 
+49. [Group Anagrams](https://leetcode.com/problems/group-anagrams/description/)
 57. [Insert Interval](https://leetcode.com/problems/insert-interval/description/)
 71. [Simplify Path](https://leetcode.com/problems/simplify-path/description/)
 73. [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/description/)
